@@ -22,7 +22,7 @@ class ClientController extends Controller
     {
         $cliente = Client::create($request->validate([
             'nome' => 'required',
-            'email' => 'required|email|unique:clientes'
+            'email' => 'required|email|unique:clients'
         ]));
         return response()->json($cliente, 201);
     }
@@ -42,7 +42,7 @@ class ClientController extends Controller
     {
         $client->update($request->validate([
             'nome' => 'required',
-            'email' => 'required|email|unique:clientes,email,'.$client->id
+            'email' => 'required|email|unique:clients,email,'.$client->id
         ]));
         return response()->json($client);
     }
