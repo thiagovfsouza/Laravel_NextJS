@@ -25,3 +25,21 @@ export function withAuth(Component) {
     return <Component {...props} />;
   };
 }
+
+export async function withAuthSSR(callback) {
+    return async function wrappedGetServerSideProps(context) {
+      const { req } = context;
+      const session = req?.user; // Aqui você pode verificar sessão no servidor, se quiser
+
+      if (!session) {
+        return {
+          redirect: {
+            destination: '/',
+            permanent: false,
+          },
+        };
+      }
+
+      return callback(context);
+    };
+  }
