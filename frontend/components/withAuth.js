@@ -29,7 +29,7 @@ export function withAuth(Component) {
 export async function withAuthSSR(callback) {
     return async function wrappedGetServerSideProps(context) {
       const { req } = context;
-      const session = req?.user; // Aqui você pode verificar sessão no servidor, se quiser
+      const session = req?.user;
 
       if (!session) {
         return {

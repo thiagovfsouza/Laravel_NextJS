@@ -16,7 +16,6 @@ const ClientDetails = () => {
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // Carrega cliente ao abrir a página
   useEffect(() => {
     async function fetchClient() {
         const { id } = router.query;
@@ -41,7 +40,6 @@ const ClientDetails = () => {
     }
   }, [authLoading]);
 
-  // Função de atualização
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);

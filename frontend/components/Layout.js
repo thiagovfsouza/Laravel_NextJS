@@ -9,7 +9,6 @@ export default function Layout({ children, title = "Dashboard" }) {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Barra superior */}
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-xl font-semibold text-gray-800">Painel</h1>
@@ -27,7 +26,6 @@ export default function Layout({ children, title = "Dashboard" }) {
         </div>
       </header>
 
-      {/* Menu de navegação */}
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8 py-4 overflow-x-auto">
@@ -56,7 +54,6 @@ export default function Layout({ children, title = "Dashboard" }) {
         </div>
       </nav>
 
-      {/* Conteúdo principal */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {children}
       </main>

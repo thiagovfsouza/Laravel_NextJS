@@ -30,7 +30,6 @@ export function ClientsPage() {
   const [lastPage, setLastPage] = useState(1);
   const [loadingData, setLoadingData] = useState(true);
 
-  // Carrega clientes
   useEffect(() => {
     async function fetchClients() {
       try {
@@ -50,7 +49,6 @@ export function ClientsPage() {
     }
   }, [page, authLoading]);
 
-  // Função de exclusão
   async function handleDelete(id) {
     toast(
         <ConfirmToast
