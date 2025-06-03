@@ -98,6 +98,7 @@ export function ClientsPage() {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Telefone</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Criado em</th>
               <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
             </tr>
           </thead>
@@ -114,6 +115,7 @@ export function ClientsPage() {
                   <td className="px-6 py-4 whitespace-nowrap text-gray-900 font-medium">{client.name}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-gray-800">{client.email}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-gray-800">{client.phone}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-800">{client.created_at}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-right space-x-2">
                     <Link
                       href={`/dashboard/clients/${client.id}`}
